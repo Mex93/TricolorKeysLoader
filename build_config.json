@@ -1,0 +1,81 @@
+{
+ "version": "auto-py-to-exe-configuration_v1",
+ "pyinstallerOptions": [
+  {
+   "optionDest": "noconfirm",
+   "value": true
+  },
+  {
+   "optionDest": "filenames",
+   "value": "C:/Users/Ryazanov/PycharmProjects/TricolorDocumentScans/main.py"
+  },
+  {
+   "optionDest": "onefile",
+   "value": false
+  },
+  {
+   "optionDest": "console",
+   "value": false
+  },
+  {
+   "optionDest": "icon_file",
+   "value": "C:/Users/Ryazanov/PycharmProjects/TricolorDocumentScans/ui/images/logo.ico"
+  },
+  {
+   "optionDest": "name",
+   "value": "\u0421\u043a\u0430\u043d\u0438\u0440\u043e\u0432\u043a\u0430 Tricolor v0.1b"
+  },
+  {
+   "optionDest": "contents_directory",
+   "value": "."
+  },
+  {
+   "optionDest": "clean_build",
+   "value": true
+  },
+  {
+   "optionDest": "strip",
+   "value": false
+  },
+  {
+   "optionDest": "noupx",
+   "value": false
+  },
+  {
+   "optionDest": "disable_windowed_traceback",
+   "value": false
+  },
+  {
+   "optionDest": "uac_admin",
+   "value": false
+  },
+  {
+   "optionDest": "uac_uiaccess",
+   "value": false
+  },
+  {
+   "optionDest": "argv_emulation",
+   "value": false
+  },
+  {
+   "optionDest": "bootloader_ignore_signals",
+   "value": false
+  },
+  {
+   "optionDest": "datas",
+   "value": "C:/Users/Ryazanov/PycharmProjects/TricolorDocumentScans/barcode_template.txt;."
+  },
+  {
+   "optionDest": "datas",
+   "value": "C:/Users/Ryazanov/PycharmProjects/TricolorDocumentScans/LabelPrinterLibrary.dll;."
+  },
+  {
+   "optionDest": "datas",
+   "value": "C:/Users/Ryazanov/PycharmProjects/TricolorDocumentScans/config.ini;."
+  }
+ ],
+ "nonPyinstallerOptions": {
+  "increaseRecursionLimit": true,
+  "manualArguments": ""
+ }
+}
