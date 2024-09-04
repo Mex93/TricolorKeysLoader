@@ -7,7 +7,7 @@
   },
   {
    "optionDest": "filenames",
-   "value": "C:/Users/Ryazanov/PycharmProjects/TricolorDocumentScans/main.py"
+   "value": "C:/Users/Ryazanov/PycharmProjects/TricolorKeysLoader/main.py"
   },
   {
    "optionDest": "onefile",
@@ -19,11 +19,11 @@
   },
   {
    "optionDest": "icon_file",
-   "value": "C:/Users/Ryazanov/PycharmProjects/TricolorDocumentScans/ui/images/logo.ico"
+   "value": "C:/Users/Ryazanov/PycharmProjects/TricolorKeysLoader/ui/images/logo.ico"
   },
   {
    "optionDest": "name",
-   "value": "\u0421\u043a\u0430\u043d\u0438\u0440\u043e\u0432\u043a\u0430 Tricolor v0.1b"
+   "value": "\u0417\u0430\u0433\u0440\u0443\u0437\u0447\u0438\u043a \u043a\u043b\u044e\u0447\u0435\u0439 Tricolor v0.1b"
   },
   {
    "optionDest": "contents_directory",
@@ -63,15 +63,7 @@
   },
   {
    "optionDest": "datas",
-   "value": "C:/Users/Ryazanov/PycharmProjects/TricolorDocumentScans/barcode_template.txt;."
-  },
-  {
-   "optionDest": "datas",
-   "value": "C:/Users/Ryazanov/PycharmProjects/TricolorDocumentScans/LabelPrinterLibrary.dll;."
-  },
-  {
-   "optionDest": "datas",
-   "value": "C:/Users/Ryazanov/PycharmProjects/TricolorDocumentScans/config.ini;."
+   "value": "C:/Users/Ryazanov/PycharmProjects/TricolorKeysLoader/config.ini;."
   }
  ],
  "nonPyinstallerOptions": {
