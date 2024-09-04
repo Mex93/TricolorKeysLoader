@@ -27,7 +27,7 @@ def get_rules_text() -> str:
 
 def get_about_text() -> str:
     current_year = datetime.now().year
-    return ("Программа для сканировки Tricolor ID.\n\n"
+    return ("Программа для добавления новых ключей Tricolor ID.\n\n"
             "Все права принадлежат ООО 'Квант'.\n\n"
             "Разработчик: Рязанов Н.В.\n"
             f"По всем интересующим вопросам и пожеланиям обращайтесь на почту {INFO_CURRENT_ADMIN_EMAIL}\n\n"
@@ -108,6 +108,7 @@ def is_tv_sn_text_valid(text: str) -> bool:
         return False
 
     return True
+
 
 def is_tricolor_text_valid(text: str) -> bool:
     clen = len(text)

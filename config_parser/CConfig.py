@@ -20,6 +20,7 @@ class CConfig:
         self.__SQL_HOST = ''
         self.__SQL_PORT = ''
         self.__SQL_DATABASE = ''
+        self.__KEYS_TEMPLATE = ''
 
         self.__config = configparser.ConfigParser()
         self.__config.add_section('program')
@@ -30,6 +31,7 @@ class CConfig:
         self.__SQL_HOST = ''
         self.__SQL_PORT = ''
         self.__SQL_DATABASE = ''
+        self.__KEYS_TEMPLATE = ''
 
     def get_config(self):
         self.__config.read('config.ini', encoding="utf-8")
@@ -39,7 +41,7 @@ class CConfig:
         self.__SQL_HOST = self.__config.get('database', 'SQL_HOST')
         self.__SQL_PORT = self.__config.get('database', 'SQL_PORT')
         self.__SQL_DATABASE = self.__config.get('database', 'SQL_DATABASE')
-
+        self.__KEYS_TEMPLATE = self.__config.get('program', 'KEYS_TEMPLATE')
 
     @staticmethod
     def is_config_created():
@@ -54,10 +56,20 @@ class CConfig:
             self.__config.set('database', 'SQL_HOST', 'This place for db host!')
             self.__config.set('database', 'SQL_PORT', 'This place for db port!')
             self.__config.set('database', 'SQL_DATABASE', 'This place for db name!')
+            self.__config.set('program', 'KEYS_TEMPLATE', '****800*******')
 
             self.set_default_for_values()
             self.__config.write(config_file)
 
+    def get_tricolor_template(self) -> str | bool:
+        len_prname = len(self.__KEYS_TEMPLATE)
+        if not len_prname or len_prname < 3:
+            raise ConfigError("Шаблон Tricolor ID не указан!")
+
+        if self.__KEYS_TEMPLATE.find("*") == -1:
+            raise ConfigError("В шаблоне Tricolor ID не найдены случайные знаки '*'!")
+
+        return self.__KEYS_TEMPLATE
 
     def get_dbpassword(self):
         return self.__SQL_PASSWORD
@@ -92,7 +104,7 @@ class CConfig:
         db_port = self.get_dbport()
         db_host = self.get_dbhost()
 
-        crypto_key = Fernet.generate_key()
+        # crypto_key = Fernet.generate_key()
         # print("keu: " + str(crypto_key))
         crypto_key = "UnYrZd2J3x0yuCNzemf4WFBbIW_nzngwLYDM9JaXN1I="  # ключ для расшифровки
         cipher_suite = Fernet(crypto_key)

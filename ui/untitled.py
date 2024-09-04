@@ -17,15 +17,16 @@ from PySide6.QtGui import (QAction, QBrush, QColor, QConicalGradient,
     QPainter, QPalette, QPixmap, QRadialGradient,
     QTransform)
 from PySide6.QtWidgets import (QApplication, QComboBox, QGroupBox, QHBoxLayout,
-    QLabel, QMainWindow, QPushButton, QSizePolicy,
-    QSpacerItem, QTextEdit, QVBoxLayout, QWidget)
+    QLabel, QMainWindow, QMenu, QMenuBar,
+    QPushButton, QSizePolicy, QSpacerItem, QTextEdit,
+    QVBoxLayout, QWidget)
 import ui.res_rc
 
 class Ui_MainWindow(object):
     def setupUi(self, MainWindow):
         if not MainWindow.objectName():
             MainWindow.setObjectName(u"MainWindow")
-        MainWindow.resize(1019, 497)
+        MainWindow.resize(1015, 489)
         MainWindow.setMinimumSize(QSize(719, 297))
         icon = QIcon()
         icon.addFile(u":/res/images/logo.ico", QSize(), QIcon.Mode.Normal, QIcon.State.Off)
@@ -33,6 +34,8 @@ class Ui_MainWindow(object):
         MainWindow.setIconSize(QSize(30, 30))
         self.action_info = QAction(MainWindow)
         self.action_info.setObjectName(u"action_info")
+        self.action_about = QAction(MainWindow)
+        self.action_about.setObjectName(u"action_about")
         self.centralwidget = QWidget(MainWindow)
         self.centralwidget.setObjectName(u"centralwidget")
         self.verticalLayout_8 = QVBoxLayout(self.centralwidget)
@@ -54,7 +57,10 @@ class Ui_MainWindow(object):
         self.combo_tv_list.setSizePolicy(sizePolicy)
         self.combo_tv_list.setMinimumSize(QSize(0, 41))
         self.combo_tv_list.setMaximumSize(QSize(16777215, 41))
-        self.combo_tv_list.setEditable(True)
+        font = QFont()
+        font.setPointSize(14)
+        self.combo_tv_list.setFont(font)
+        self.combo_tv_list.setEditable(False)
         self.combo_tv_list.setMaxVisibleItems(20)
         self.combo_tv_list.setInsertPolicy(QComboBox.InsertPolicy.NoInsert)
 
@@ -88,21 +94,25 @@ class Ui_MainWindow(object):
         self.verticalLayout_5.setObjectName(u"verticalLayout_5")
         self.label_model = QLabel(self.groupBox_3)
         self.label_model.setObjectName(u"label_model")
-        font = QFont()
-        font.setPointSize(15)
-        self.label_model.setFont(font)
+        font1 = QFont()
+        font1.setPointSize(15)
+        self.label_model.setFont(font1)
 
         self.verticalLayout_5.addWidget(self.label_model)
 
+        self.verticalSpacer_3 = QSpacerItem(20, 40, QSizePolicy.Policy.Minimum, QSizePolicy.Policy.Expanding)
+
+        self.verticalLayout_5.addItem(self.verticalSpacer_3)
+
         self.label_key_no_loaded = QLabel(self.groupBox_3)
         self.label_key_no_loaded.setObjectName(u"label_key_no_loaded")
-        self.label_key_no_loaded.setFont(font)
+        self.label_key_no_loaded.setFont(font1)
 
         self.verticalLayout_5.addWidget(self.label_key_no_loaded)
 
         self.label_key_success_loaded = QLabel(self.groupBox_3)
         self.label_key_success_loaded.setObjectName(u"label_key_success_loaded")
-        self.label_key_success_loaded.setFont(font)
+        self.label_key_success_loaded.setFont(font1)
 
         self.verticalLayout_5.addWidget(self.label_key_success_loaded)
 
@@ -164,6 +174,15 @@ class Ui_MainWindow(object):
         self.verticalLayout_8.addLayout(self.horizontalLayout_2)
 
         MainWindow.setCentralWidget(self.centralwidget)
+        self.menuBar = QMenuBar(MainWindow)
+        self.menuBar.setObjectName(u"menuBar")
+        self.menuBar.setGeometry(QRect(0, 0, 1015, 22))
+        self.menu = QMenu(self.menuBar)
+        self.menu.setObjectName(u"menu")
+        MainWindow.setMenuBar(self.menuBar)
+
+        self.menuBar.addAction(self.menu.menuAction())
+        self.menu.addAction(self.action_about)
 
         self.retranslateUi(MainWindow)
 
@@ -173,6 +192,7 @@ class Ui_MainWindow(object):
     def retranslateUi(self, MainWindow):
         MainWindow.setWindowTitle(QCoreApplication.translate("MainWindow", u"MainWindow", None))
         self.action_info.setText(QCoreApplication.translate("MainWindow", u"\u041e \u043f\u0440\u043e\u0433\u0440\u0430\u043c\u043c\u0435", None))
+        self.action_about.setText(QCoreApplication.translate("MainWindow", u"\u041e \u043f\u0440\u043e\u0433\u0440\u0430\u043c\u043c\u0435", None))
         self.groupBox_2.setTitle(QCoreApplication.translate("MainWindow", u"\u0412\u044b\u0431\u0435\u0440\u0438\u0442\u0435 \u0434\u043e\u0441\u0442\u0443\u043f\u043d\u0443\u044e \u043c\u043e\u0434\u0435\u043b\u044c:", None))
         self.combo_tv_list.setCurrentText("")
         self.groupBox.setTitle(QCoreApplication.translate("MainWindow", u"\u041c\u0435\u0441\u0442\u043e \u0434\u043b\u044f \u043a\u043b\u044e\u0447\u0435\u0439:", None))
@@ -183,5 +203,6 @@ class Ui_MainWindow(object):
         self.pushButton_clear_all.setText(QCoreApplication.translate("MainWindow", u"\u041e\u0447\u0438\u0441\u0442\u0438\u0442\u044c \u0432\u0441\u0451", None))
         self.pushButton_clear_list.setText(QCoreApplication.translate("MainWindow", u"\u041e\u0447\u0438\u0441\u0442\u0438\u0442\u044c \u0441\u043f\u0438\u0441\u043e\u043a", None))
         self.pushButton_start_load.setText(QCoreApplication.translate("MainWindow", u"\u0417\u0430\u0433\u0440\u0443\u0437\u0438\u0442\u044c", None))
+        self.menu.setTitle(QCoreApplication.translate("MainWindow", u"\u0418\u043d\u0444\u043e\u0440\u043c\u0430\u0446\u0438\u044f", None))
     # retranslateUi
 
