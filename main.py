@@ -225,6 +225,7 @@ class MainWindow(QMainWindow):
                         if count_match_pattern:
                             in_insert_keys = list()
                             success_query_check_count = 0
+                            error_keys = list()
                             for key in success_keys:
 
                                 result = csql.get_assembled_tv_from_tricolor_key(key)
@@ -235,6 +236,7 @@ class MainWindow(QMainWindow):
                                             f"'{tv_sn}'[{tv_name}][{tv_fk}]"
                                             f"[{str(completed_scan_time)}][Линия {assemled_line}]")
                                     print(text)
+                                    error_keys.append(key)
                                     logging.critical(text)
                                     continue
 
@@ -247,6 +249,7 @@ class MainWindow(QMainWindow):
                                             f"[{tv_name}][{tv_fk}][{str(load_key_data)}]")
 
                                     logging.critical(text)
+                                    error_keys.append(key)
                                     print(text)
                                     continue
 
@@ -260,6 +263,7 @@ class MainWindow(QMainWindow):
                                             f"[{str(attach_on_device_date)}][Линия {assemled_line}]")
 
                                     logging.critical(text)
+                                    error_keys.append(key)
                                     print(text)
                                     continue
 
@@ -273,6 +277,7 @@ class MainWindow(QMainWindow):
                                             f"[{str(attach_on_device_date)}][Линия {assemled_line}]")
 
                                     logging.critical(text)
+                                    error_keys.append(key)
                                     print(text)
                                     continue
 
@@ -301,6 +306,11 @@ class MainWindow(QMainWindow):
 
                                 logging.info(text)
                                 print(text)
+
+                                if len(error_keys) > 0:
+                                    with open(f'keys_errors_{get_current_unix_time()}.txt', 'w') as file:
+                                        file.write("\n".join(error_keys))
+
                                 send_message_box(icon_style=SMBOX_ICON_TYPE.ICON_INFO,
                                                  text="Ключи успешно вставлены!\n\n"
                                                       f"Модель {changed_model_name}[{changed_tv_fk}]\n"
@@ -321,6 +331,11 @@ class MainWindow(QMainWindow):
 
                                 logging.warning(text)
                                 print(text)
+
+                                if len(error_keys) > 0:
+                                    with open(f'keys_errors_{get_current_unix_time()}.txt', 'w') as file:
+                                        file.write("\n".join(error_keys))
+
                                 self.clabels.set_error_count(count_errors)
                                 self.clabels.set_success_count(success_query_check_count)
                                 send_message_box(icon_style=SMBOX_ICON_TYPE.ICON_ERROR,
