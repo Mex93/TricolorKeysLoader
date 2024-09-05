@@ -192,7 +192,6 @@ class MainWindow(QMainWindow):
                         filtered_list = [item for item in keys if item]
                         keys = filtered_list
                         all_first_parsed = len(filtered_list)
-                        print(filtered_list)
                     else:
                         self.clabels.set_error_count(1)
                         self.clabels.set_success_count(0)

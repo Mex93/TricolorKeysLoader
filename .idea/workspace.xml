@@ -4,18 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="80f43dd0-149c-4dd8-ab8f-4253c55d5e54" name="Changes" comment="first">
+    <list default="true" id="80f43dd0-149c-4dd8-ab8f-4253c55d5e54" name="Changes" comment="сompleted 01.b">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/common.py" beforeDir="false" afterPath="$PROJECT_DIR$/common.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config.ini" beforeDir="false" afterPath="$PROJECT_DIR$/config.ini" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config_parser/CConfig.py" beforeDir="false" afterPath="$PROJECT_DIR$/config_parser/CConfig.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/enuuuums.py" beforeDir="false" afterPath="$PROJECT_DIR$/enuuuums.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/main.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/requirements.txt" beforeDir="false" afterPath="$PROJECT_DIR$/requirements.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sql/CSQLQuerys.py" beforeDir="false" afterPath="$PROJECT_DIR$/sql/CSQLQuerys.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ui/untitled.py" beforeDir="false" afterPath="$PROJECT_DIR$/ui/untitled.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ui/untitled.ui" beforeDir="false" afterPath="$PROJECT_DIR$/ui/untitled.ui" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -107,11 +98,28 @@
       <option name="project" value="LOCAL" />
       <updated>1725445164046</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="сompleted 01.b">
+      <option name="closed" value="true" />
+      <created>1725466208283</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1725466208283</updated>
+    </task>
+    <task id="LOCAL-00004" summary="сompleted 01.b">
+      <option name="closed" value="true" />
+      <created>1725466905504</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1725466905504</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="first" />
-    <option name="LAST_COMMIT_MESSAGE" value="first" />
+    <MESSAGE value="сompleted 01.b" />
+    <option name="LAST_COMMIT_MESSAGE" value="сompleted 01.b" />
   </component>
 </project>
